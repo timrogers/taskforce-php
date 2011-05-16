@@ -13,7 +13,7 @@ All the methods in the [Taskforce API](http://www.taskforceapp.com/api) are avai
 
 All the method names for the library are pretty much as you would expected **(except for a few exceptions which I will tell you below)** - take a look at the [API page](http://www.taskforceapp.com/api) and use the names there, but instead of using spaces, change the names into camelCase. For example, for the method called **Create User**, you would use the method **createUser()**. The parameters are then as you would expect, in the order that they are shown in the documentation - so just follow that. 
 
-**Anyway, as I said, a few methods have different names to what you would expect where there are two methods named the same on the API documentation. For the "Get Tasks", "Add Collaborator" and "Remove Collaborator" methods for Lists, the method names are "listGetTasks", "listAddCollaborator" and "listRemoveCollaborator" respectively.
+**Anyway, as I said, a few methods have different names to what you would expect where there are two methods named the same on the API documentation. For the "Get Tasks", "Add Collaborator" and "Remove Collaborator" methods for Lists, the method names are "listGetTasks", "listAddCollaborator" and "listRemoveCollaborator" respectively.**
 
 If the method worked out satisfactorily, which it should do providing you didn't get any parameters wrong, you will receive the JSON object returned back, in the form of a JSON object, not a string. If there's a problem, the method will return false. The only exception to this is the createUser() method, which returns true if everything went okay, and false if it didn't.
 
