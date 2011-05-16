@@ -45,7 +45,6 @@ class Taskforce
 		
 		$result = curl_exec($curlObject);
 		$info = curl_getinfo($curlObject);
-		die(var_dump($info));
 		if ($info['http_code'] == 200) { return true; } else { return false; }
 		curl_close($curlObject);
 	}
