@@ -7,11 +7,11 @@ Taskforce, as well as providing extensions for browsers, allows developers to in
 
 This library is a work in progress, and will allow you to quickly access methods of the Taskforce API from within your scripts written in [PHP](http://php.net). 
 
-**Just to warn, there's a fair chance that this library is going to break in a little while when we make some changes to the API authentication system - I'll get it fixed very quickly though. In fact, the fix is ready to go and can be committed when the time comes, so have no fear and stay tunes!**
+**The API has changed a little bit from the very earliest version - now, instead of using the user's password, the API now uses a unique API key, which a user can obtain on the [Taskforce website](https://www.taskforceapp.com/account).**
 
 ### API Methods
 
-To use the methods, you need to create a new Taskforce object. This takes two parameters, the user's username and their password. Save this object to a variable, and then you can call the methods on that user. **The only exception to this is the createUser() method, which is a static function called through Taskforce::createUser("username", "password").** If you're confused, take a look at test.php to see how things work.
+To use the methods, you need to create a new Taskforce object. This takes two parameters, the user's username and their API key. Save this object to a variable, and then you can call the methods on that user. **The only exception to this is the createUser() method, which is a static function called through Taskforce::createUser("username", "password").** If you're confused, take a look at test.php to see how things work.
 
 All the methods in the [Taskforce API](http://www.taskforceapp.com/api) are available, except for the Reorder Tasks method which is yet to be implemented due to some weird problem that I'm having with it.
 

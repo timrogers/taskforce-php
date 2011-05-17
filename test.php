@@ -1,13 +1,15 @@
 <?php
 include("Taskforce.inc.php");
 
-#Add your Taskforce username and password here, which is then put into the object below
+#Add your Taskforce username and API key here, which is then put into the object below. You can get your API key at http://www.taskforceapp.com/account
 $username = "";
-$password = "";
+$apiKey = "";
 
 
-#Making a Taskforce object using the username and password from above
-$object = new Taskforce($username, $password);
+#Making a Taskforce object using the username and password from above, get the user's details then dump them out to the browser
+$object = new Taskforce($username, $apiKey);
+$user = $object->getUser();
+var_dump($user);
 
 
 $list = $object->createList("A list I'm going to create");

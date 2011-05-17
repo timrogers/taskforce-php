@@ -17,13 +17,13 @@ Copyright 2011 Tyrant Inc.
 class Taskforce
 {
 	private $username;
-	private $password;
+	private $apiKey;
 	public $lastUrl;
 	public $curlObject;
 	
-	public function __construct($username, $password) {
+	public function __construct($username, $apiKey) {
 		$this->username = $username;
-		$this->password = $password;
+		$this->apiKey = $apiKey;
 	}
 	
 	public static function createUser($email, $password) {
@@ -58,7 +58,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		
 		$result = curl_exec($curlObject);
 		$info = curl_getinfo($curlObject);
@@ -73,7 +73,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		
 		$result = curl_exec($curlObject);
 		$info = curl_getinfo($curlObject);
@@ -89,7 +89,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		
 		$result = curl_exec($curlObject);
 		$info = curl_getinfo($curlObject);
@@ -110,7 +110,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		curl_setopt($curlObject, CURLOPT_POST, true);
 		curl_setopt($curlObject, CURLOPT_POSTFIELDS, $post);
 		
@@ -127,7 +127,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		
 		$result = curl_exec($curlObject);
 		$info = curl_getinfo($curlObject);
@@ -148,7 +148,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		curl_setopt($curlObject, CURLOPT_POST, true);
 		curl_setopt($curlObject, CURLOPT_POSTFIELDS, $post);
 		
@@ -170,7 +170,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		curl_setopt($curlObject, CURLOPT_POST, true);
 		curl_setopt($curlObject, CURLOPT_POSTFIELDS, $post);
 		
@@ -192,7 +192,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		curl_setopt($curlObject, CURLOPT_POST, true);
 		curl_setopt($curlObject, CURLOPT_POSTFIELDS, $post);
 		
@@ -212,7 +212,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		curl_setopt($curlObject, CURLOPT_POST, true);
 		curl_setopt($curlObject, CURLOPT_POSTFIELDS, $post);
 		
@@ -232,7 +232,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		curl_setopt($curlObject, CURLOPT_POST, true);
 		curl_setopt($curlObject, CURLOPT_POSTFIELDS, $post);
 		
@@ -253,7 +253,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		curl_setopt($curlObject, CURLOPT_POST, true);
 		curl_setopt($curlObject, CURLOPT_POSTFIELDS, $post);
 		
@@ -274,7 +274,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		curl_setopt($curlObject, CURLOPT_POST, true);
 		curl_setopt($curlObject, CURLOPT_POSTFIELDS, $post);
 		
@@ -295,7 +295,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		curl_setopt($curlObject, CURLOPT_POST, true);
 		curl_setopt($curlObject, CURLOPT_POSTFIELDS, $post);
 		
@@ -316,7 +316,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		curl_setopt($curlObject, CURLOPT_POST, true);
 		curl_setopt($curlObject, CURLOPT_POSTFIELDS, $post);
 		
@@ -337,7 +337,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		curl_setopt($curlObject, CURLOPT_POST, true);
 		curl_setopt($curlObject, CURLOPT_POSTFIELDS, $post);
 		
@@ -357,7 +357,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		curl_setopt($curlObject, CURLOPT_POST, true);
 		curl_setopt($curlObject, CURLOPT_POSTFIELDS, $post);
 		
@@ -380,7 +380,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		curl_setopt($curlObject, CURLOPT_POST, true);
 		curl_setopt($curlObject, CURLOPT_POSTFIELDS, $post);
 		
@@ -397,7 +397,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		
 		$result = curl_exec($curlObject);
 		$info = curl_getinfo($curlObject);
@@ -412,7 +412,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		
 		$result = curl_exec($curlObject);
 		$info = curl_getinfo($curlObject);
@@ -433,7 +433,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		curl_setopt($curlObject, CURLOPT_POST, true);
 		curl_setopt($curlObject, CURLOPT_POSTFIELDS, $post);
 		
@@ -452,7 +452,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		
 		$result = curl_exec($curlObject);
 		$info = curl_getinfo($curlObject);
@@ -474,7 +474,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		curl_setopt($curlObject, CURLOPT_POST, true);
 		curl_setopt($curlObject, CURLOPT_POSTFIELDS, $post);
 		
@@ -496,7 +496,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		curl_setopt($curlObject, CURLOPT_POST, true);
 		curl_setopt($curlObject, CURLOPT_POSTFIELDS, $post);
 		
@@ -516,7 +516,7 @@ class Taskforce
 		curl_setopt($curlObject, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($curlObject, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->password);
+		curl_setopt($curlObject, CURLOPT_USERPWD, $this->username . ":" . $this->apiKey);
 		curl_setopt($curlObject, CURLOPT_POST, true);
 		curl_setopt($curlObject, CURLOPT_POSTFIELDS, $post);
 		
